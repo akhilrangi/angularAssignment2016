@@ -1,42 +1,42 @@
 ﻿<!DOCTYPE html>
 <!-- define angular app -->
-<body ng-controller="mainController">
-<html>
-<head>
-    <!-- SCROLLS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-    <!-- SPELLS -->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.js"></script>
-    <script src="app.js"></script>
-</head>
-<!-- define angular controller -->
->
+<body>
+    <html ng-app="myApp">
+    <head>
+        <!-- SCROLLS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+        <!-- SPELLS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <!-- define angular controller -->
+    >
     <nav class="navbar navbar-default">
-        <div ng-app="myApp">
-        <div class="container">
-            <div class="navbar-header">
-                <!--<a class="navbar-brand" href="/">Angular Routing Example</a>-->
-                <h1>Welcome to Social Networking Site</h1>
+        <div ng-controller="mainController">
+            <div class="container">
+                <div class="navbar-header">
+                    <!--<a class="navbar-brand" href="/">Angular Routing Example</a>-->
+                    <h1>Welcome to Social Networking Site</h1>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li><a href="#"><i class="fa fa-home"></i> Home</a></li>-->
+                    <li><a href="#login"><i class="fa fa-shield"></i> Login</a></li>
+                    <li><a href="#signup"><i class="fa fa-comment"></i>Signup</a></li>
+                    <li><a href="#dashboard"><i class="fa fa-comment"></i>dashboard</a></li>
+                    <li><a href="#afterlogin"><i class="fa fa-comment"></i>afterlogin</a></li>
+
+                </ul>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <!--<li><a href="#"><i class="fa fa-home"></i> Home</a></li>-->
-                <li><a href="#login"><i class="fa fa-shield"></i> Login</a></li>
-                <li><a href="#signup"><i class="fa fa-comment"></i>Signup</a></li>
-                <li><a href="#dashboard"><i class="fa fa-comment"></i>dashboard</a></li>
-                <li><a href="#afterlogin"><i class="fa fa-comment"></i>afterlogin</a></li>
+</nav>
+    <div id="main">
 
-            </ul>
-        </div>
-    </nav>
-<div id="main">
-
-    <!-- angular templating -->
-    <!-- this is where content will be injected -->
-    <div ng-view></div>
-</div>
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
     </div>
+    <!--</div>-->
 </body>
 </html>
