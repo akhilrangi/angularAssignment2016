@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+
+
+    <link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="../app.js"></script>
+</head>
+
+<body>
+    <div ng-controller="loginController">
+        <p><h1>Welcome to the Login Page</h1></p>
+       
+        <!--<div ng-repeat="itemToAdd1 in itemsToAdd1">-->
+       
+            <div>
+                <label>UserName</label>
+                <input type="text" ng-model=itemstoAdd1.USERNAME required>  <br />
+            </div>
+            <div>
+                <label>password</label>
+                <input type="text" ng-model=itemstoAdd1.PASSWORD required>  <br />
+            </div>
+
+            <div>
+                <!--<label>Submit</label>-->
+                <input type="button" ng-click="submit(itemstoAdd1)" value="Submit">  <br />
+            </div>
+        <!--//table-->
+         <!--<table >
+                    <tr>
+                        <td>UserName:</td>
+                        <td>Action:</td>
+                    </tr>
+                    <tr ng-repeat="friends in AddFriends">
+                        <td>{{friends.UserName}}</td>
+                        <td><input type="button" value="Add Friend" ng-click="addFriend(friends)" /></td>
+                    </tr>
+                </table>-->
+        <!--table-->
+        <!--</div>-->
+        <!--<div ng-repeat="ITEM in ITEMS">
+            <table>
+                <tr>
+                    <td>{{ITEMS.USERNAME}}</td>
+                    <td>{{ITEMS.PASSWORD}}</td>
+                </tr>
+            </table>
+        </div>-->
+    </div>
+</body>
+</html>

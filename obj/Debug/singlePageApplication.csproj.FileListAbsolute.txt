@@ -1,0 +1,6 @@
+D:\visualStudioProgram\singlePageApplication\singlePageApplication\bin\singlePageApplication.dll.config
+D:\visualStudioProgram\singlePageApplication\singlePageApplication\bin\singlePageApplication.dll
+D:\visualStudioProgram\singlePageApplication\singlePageApplication\bin\singlePageApplication.pdb
+D:\visualStudioProgram\singlePageApplication\singlePageApplication\obj\Debug\singlePageApplication.dll
+D:\visualStudioProgram\singlePageApplication\singlePageApplication\obj\Debug\singlePageApplication.pdb
+D:\visualStudioProgram\singlePageApplication\singlePageApplication\obj\Debug\singlePageApplication.csprojResolveAssemblyReference.cache
