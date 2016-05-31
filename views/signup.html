@@ -1,23 +1,13 @@
 ﻿<!DOCTYPE html>
 
-<html ng-app="myApp">
+<html>
 
 <head>
 
     <title>Social Networking Project</title>
 
-    <link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-    <link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.js"></script>
-    <!--<!--<script src="../controller/signupController.js"></script>-->-->
-    <script src="../app.js"></script>
 </head>
 <body>
-    <div ng-controller="signupController">
-
-
         <div class=container>
 
             <div class=row>
@@ -50,6 +40,7 @@
                         <input type="text" ng-model=itemToAdd.city class=form-control>  <br />
                     </div>
                     <button ng-click="save(itemToAdd)">Save</button>
+                        <!--<input type="button" value="promise" ng-click="makePromiseWithSon() " />-->
 
                 </div>
                     <div ng-repeat="item in items">
@@ -80,7 +71,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html> 

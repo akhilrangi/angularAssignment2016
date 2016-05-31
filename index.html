@@ -1,19 +1,23 @@
 ﻿<!DOCTYPE html>
 <!-- define angular app -->
-<body>
+
     <html ng-app="myApp">
     <head>
-        <!-- SCROLLS -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-        <!-- SPELLS -->
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.js"></script>
-        <script src="app.js"></script>
-    </head>
+    <title></title>
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <!-- SPELLS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.js"></script>
+    <script src="app.js"></script>
+        <!--<script src="Service/SonService.js"></script>
+        <script src="controller/promiseController.js"></script>-->
+</head>
+<body>
     <!-- define angular controller -->
-    >
+    
     <nav class="navbar navbar-default">
         <div ng-controller="mainController">
             <div class="container">
@@ -26,17 +30,20 @@
                     <li><a href="#login"><i class="fa fa-shield"></i> Login</a></li>
                     <li><a href="#signup"><i class="fa fa-comment"></i>Signup</a></li>
                     <li><a href="#dashboard"><i class="fa fa-comment"></i>dashboard</a></li>
-                    <li><a href="#afterlogin"><i class="fa fa-comment"></i>afterlogin</a></li>
+                    <li><a href="#afterlogin"><i class="fa fa-comment"></i>AddFriend</a></li>
 
                 </ul>
             </div>
-</nav>
-    <div id="main">
+            <!--<div>
+                <input type="button" value="promise" ng-click="makePromiseWithSon"></div>
+        </div>-->
+    </nav>
+    <!--<div id="main">-->
 
         <!-- angular templating -->
         <!-- this is where content will be injected -->
         <div ng-view></div>
-    </div>
+    <!--</div>-->
     <!--</div>-->
 </body>
 </html>

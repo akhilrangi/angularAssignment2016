@@ -32,14 +32,14 @@ myApp.config(function ($routeProvider) {
         templateUrl: 'views/dashboard.html',
         controller: 'afterLogin'
     })
-    
+
     .when('/afterlogin', {
         templateUrl: 'views/afterLogin.html',
         controller: 'afterLogin'
-    })
-    .otherwise({
-        redirectTo: '/'
     });
+    //.otherwise({
+    //    redirectTo: '/'
+    //});
 
 
 });
@@ -52,6 +52,7 @@ myApp.controller('mainController', function ($scope, $rootScope) {
 
 myApp.controller('loginController', function ($scope, $rootScope, $location) {
     //alert($rootScope.items);
+    //$scope.showfrnd = false;
     if ($scope.items1 == undefined) {
         $scope.items1 = [];
     }
@@ -60,10 +61,10 @@ myApp.controller('loginController', function ($scope, $rootScope, $location) {
     //    PASSWORD: ''
     //}];
     $scope.submit = function (itemstoAdd1) {
-
+        
         //editable
 
-        var UserExist =
+          var UserExist =
         $scope.items1.push(angular.copy(itemstoAdd1));
         localStorage.setItem('saved data', JSON.stringify($scope.items1));
         var data1 = [];
@@ -72,9 +73,11 @@ myApp.controller('loginController', function ($scope, $rootScope, $location) {
 
 
         var data = [];
-        data = JSON.parse(localStorage.getItem('saved value'));
+        data = JSON.parse(localStorage.getItem('saved value')); 
+        //$rootScope.UserExist;
         var UserExists = data.filter(function (item) {
             return item.UserName == itemstoAdd1.USERNAME;
+
         })
 
         if (UserExists) {
@@ -98,7 +101,9 @@ myApp.controller('loginController', function ($scope, $rootScope, $location) {
 });
 
 myApp.controller('afterLogin', function ($scope, $rootScope) {
+    //$scope.showfrnd = false;
     //debugger;
+
     //var ExistingUsers = [];
     //alert("Check"+$rootScope.dashboard)
     debugger;
@@ -134,14 +139,14 @@ myApp.controller('afterLogin', function ($scope, $rootScope) {
                 
                 //debugger;
                 localStorage.setItem('saved value', JSON.stringify(data));
-                $scope.ShowAllData = JSON.parse(localStorage.getItem('saved value'));
+                $rootScope.ShowAllData = JSON.parse(localStorage.getItem('saved value'));
                 //var dashboard = [];
                 //$rootScope.dashboard = data;
                 //alert(dashboard.UserName);
             }
         }       
     }
-
+    debugger;
     $rootScope.dashboard = data;
     //alert("Check" + $rootScope.dashboard)
 
@@ -153,6 +158,7 @@ myApp.controller('afterLogin', function ($scope, $rootScope) {
 });
 
 myApp.controller('signupController', function ($scope, $rootScope, $localStorage) {
+    //$scope.showfrnd = false;
     debugger;
     //var checkData = $rootScope.dashboard;
     //alert($rootScope.items);
@@ -171,10 +177,16 @@ myApp.controller('signupController', function ($scope, $rootScope, $localStorage
         }];
 
         $scope.save = function (itemsToAdd) {
-
-
             debugger;
+            var data;
+            data = JSON.parse(localStorage.getItem('saved value'));
+            
+            if (data)
+            {
+                $rootScope.items = data;
+            }
             $rootScope.items.push(angular.copy(itemsToAdd));
+          
             alert("data saved successfully");
             //alert($scope.items.length);
             localStorage.setItem('saved value', JSON.stringify($rootScope.items));
